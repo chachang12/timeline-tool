@@ -1,8 +1,15 @@
-# React + Vite
+# Timeline Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a small React application designed to test if you know the timeline of historic events for your upcoming exam. 
 
-Currently, two official plugins are available:
+Current dataset: events2.json
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+If you want your data set uploaded to the application, feel free to reach out. 
+
+Please format your data set as follows:
+'[
+  {"name" : "Event 1", "date" : "2024"},
+  ...
+]
+
+ChatGPT is usually pretty helpful if you pass your data set and that example snippit in the prompt.
