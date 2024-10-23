@@ -8,7 +8,7 @@ function App() {
   const [showYears, setShowYears] = useState(false);
 
   useEffect(() => {
-    fetch('/timeline-tool/events2.json')
+    fetch(`${process.env.PUBLIC_URL}/events2.json`)
       .then(response => response.json())
       .then(data => {
         setEvents(data);
