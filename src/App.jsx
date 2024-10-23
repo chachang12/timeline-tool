@@ -8,7 +8,7 @@ function App() {
   const [showYears, setShowYears] = useState(false);
 
   useEffect(() => {
-    fetch('/events2.json')
+    fetch('/timeline-tool/events2.json')
       .then(response => response.json())
       .then(data => {
         setEvents(data);
@@ -72,10 +72,10 @@ function App() {
   };
 
   return (
-    <div className='flex items-center justify-center w-full min-h-screen bg-gray-800'>
+    <div className='flex flex-col items-center justify-center w-full min-h-screen bg-gray-800'>
       <div className="flex flex-col items-center mx-auto">      
         <h1 className="text-2xl font-bold mb-4 text-white">Which event came first?</h1>
-        <div className="cards flex justify-center w-full space-x-4">
+        <div className="cards flex justify-center space-x-4 mx-2">
           {eventPair.map((event) => (
             <div
               key={event.name}
@@ -104,6 +104,7 @@ function App() {
             </button>
           </div>
         )}
+        
       </div>
     </div>
   );
