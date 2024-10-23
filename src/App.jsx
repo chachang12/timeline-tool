@@ -8,7 +8,7 @@ function App() {
   const [showYears, setShowYears] = useState(false);
 
   useEffect(() => {
-    fetch('/events.json')
+    fetch('/events2.json')
       .then(response => response.json())
       .then(data => {
         setEvents(data);
@@ -35,6 +35,10 @@ function App() {
     } else {
       const anotherRandomEvent = events[Math.floor(Math.random() * events.length)];
       eventPair = [randomEvent, anotherRandomEvent];
+    }
+
+    if (eventPair[0].year === eventPair[1].year) {
+      return getRandomEvents(events);
     }
 
     return eventPair;
