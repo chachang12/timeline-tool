@@ -8,7 +8,7 @@ function App() {
   const [showYears, setShowYears] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}/events2.json`)
+    fetch(`${import.meta.env.BASE_URL}/events3.json`)
       .then(response => response.json())
       .then(data => {
         setEvents(data);
